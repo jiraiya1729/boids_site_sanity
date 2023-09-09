@@ -43,8 +43,8 @@ return (
 <div className="p-4 md:w-1/3">
   <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
     <Image className="lg:h-48 md:h-36 w-full object-cover object-center" src={urlFor(props.img).url()} alt="blog" 
-    width={692} // Specify the width of the image
-    height={392} // Specify the height of the image
+    width={692} 
+    height={392} 
     />
     <div className="p-6">
     <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">

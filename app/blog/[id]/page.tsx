@@ -39,8 +39,8 @@ const BlogContent = async({params}:any) => {
   return (
     <section className=" body-font h-full">
         <Image className="lg:h-48 md:h-36 w-full object-cover object-center" src={urlFor(res.coverImage).url()} alt="blog" 
-    width={692} // Specify the width of the image
-    height={592} // Specify the height of the image
+    width={692} 
+    height={592} 
     />
     <div className="flex flex-col text-center w-full mb-12">
       <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">{res.title}</h1>
