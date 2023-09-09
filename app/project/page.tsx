@@ -5,6 +5,7 @@ import client, { urlFor } from '../sanity/client'
 import Link from 'next/link'
 import Image from 'next/image';
 import { PortableText } from "@portabletext/react";
+import { RichText } from "../";
 
 
 const Items=(props:any)=>{

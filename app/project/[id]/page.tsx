@@ -2,6 +2,15 @@ import { fetchTutorials } from "@/app/sanity/api";
 import { urlFor } from "@/app/sanity/client";
 import { PortableText } from "@portabletext/react";
 import Image from 'next/image';
+import { RichText } from "../../components/RichText";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const BlogContent = async({params}:any) => {
   function formatDate(dateString: string): string {
@@ -35,11 +44,15 @@ const BlogContent = async({params}:any) => {
       <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">{res.title}</h1>
       <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{formatDate(res.publishedAt)}</h2>
     </div>
+
+    <CardContent>
+
 <div className="prose-sm md:prose-lg max-w-md md:max-w-3xl mx-auto" >
-    <PortableText value={res.body}/>
+<PortableText value={res.body} components={RichText}/>
     
     {/* <div>{res}</div> */}
 </div>
+    </CardContent>
 </section>
 
   )

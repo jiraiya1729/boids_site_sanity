@@ -12,6 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { RichText } from "../../components/RichText";
 
 const BlogContent = async({params}:any) => {
   function formatDate(dateString: string): string {
@@ -49,7 +50,7 @@ const BlogContent = async({params}:any) => {
       
 
     <div className="prose-sm md:prose-lg max-w-md md:max-w-3xl mx-auto">
-        <PortableText value={res.body}/>
+        <PortableText value={res.body} components={RichText}/>
     
 </div>
     </CardContent>
