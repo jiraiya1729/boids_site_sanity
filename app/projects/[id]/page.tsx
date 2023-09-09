@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { RichText } from "../../components/RichText";
+import { RichText } from "../../../components/RichText";
 
 const BlogContent = async({params}:any) => {
   function formatDate(dateString: string): string {
@@ -27,8 +27,8 @@ const BlogContent = async({params}:any) => {
     return dateObj.toLocaleDateString('en-US', options);
 }
    const id=params.id
-//    console.log(params)
-    const res=await fetchTutorials(`*[_type == 'blog' && slug.current == '${id}'][0] {
+   console.log(params)
+    const res=await fetchTutorials(`*[_type == 'project' && slug.current == '${id}'][0] {
         "body": body,
         "coverImage": coverImage,
         "title":title,
